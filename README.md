@@ -67,7 +67,7 @@ The dataset contains 1,338 records with the following features:
 **Performance metrics for polynomial features:**
 
 - R2 Score: ~0.86-0.88 (improvement from 0.784)
-- MAE: Reduced from ~$4,181
+- MAE: Reduced from ~$4,181 to $2,212
 - MSE: Significant reduction
 
 
