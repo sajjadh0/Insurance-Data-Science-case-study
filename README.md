@@ -1,4 +1,4 @@
-<img width="1372" height="570" alt="Screenshot 2025-10-15 130654" src="https://github.com/user-attachments/assets/704a64f1-de06-455b-9efc-3e7056f6ce43" />**Insurance Cost Prediction - Linear Regression Case Study**
+**Insurance Cost Prediction - Linear Regression Case Study**
 
 This project implements a Linear Regression model to predict insurance costs based on various customer attributes. The analysis includes comprehensive exploratory data analysis (EDA), data preprocessing, feature engineering, and model evaluation to understand the factors that influence medical insurance charges.
 
