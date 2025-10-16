@@ -49,7 +49,10 @@ Red diagonal line: Ideal prediction line (where predicted = actual)
 **Training vs Testing:**                                                                                                              
 Training R²: Higher (not explicitly shown but implied by tighter clustering)
 Testing R²: 0.784 (78.4% variance explained)
-Performance Gap: Small difference between training and testing performance indicates good model generalisation                                                            
+Performance Gap: Small difference between training and testing performance indicates good model generalisation    
+
+
+
 **Polynomial Regression (Degree 2):**                                                  
 Performance metrics for polynomial features                                                  
 ->R2 Score: ~0.86-0.88 (improvement from 0.784)                
