@@ -1,4 +1,4 @@
-<img width="1369" height="565" alt="Screenshot 2025-10-15 130713" src="https://github.com/user-attachments/assets/e666429a-5de2-4ce9-9225-b4ae644ddcb6" />**Insurance Cost Prediction - Linear Regression Case Study**
+**Insurance Cost Prediction - Linear Regression Case Study**
 
 This project implements a Linear Regression model to predict insurance costs based on various customer attributes. The analysis includes comprehensive exploratory data analysis (EDA), data preprocessing, feature engineering, and model evaluation to understand the factors that influence medical insurance charges.
 
@@ -8,7 +8,7 @@ To build a predictive model that can estimate insurance charges based on custome
 
 
 **DataSet**                                                                                      
-Dataset contains 1,338 records with the following features
+The dataset contains 1,338 records with the following features
 ->Features: (categorical- sex, region, smoker)
           (numerical- age, bmi, children)                                            
 ->Target: charges(numeric)
@@ -46,23 +46,20 @@ Red diagonal line: Ideal prediction line (where predicted = actual)
 
 <img width="1369" height="565" alt="Screenshot 2025-10-15 130713" src="https://github.com/user-attachments/assets/36538fcf-c4a1-4ff3-8f3f-0dc4e30885a4" />          
 
-**Training vs Testing:**
+**Training vs Testing:**                                                                                                              
 Training R²: Higher (not explicitly shown but implied by tighter clustering)
 Testing R²: 0.784 (78.4% variance explained)
 Performance Gap: Small difference between training and testing performance indicates good model generalisation                                                            
-
 **Polynomial Regression (Degree 2):**                                                  
 Performance metrics for polynomial features                                                  
 ->R2 Score: ~0.86-0.88 (improvement from 0.784)                
 ->MAE: Reduced from ~$4,181                                                                      
-->MSE: Significant reduction   
+->MSE: Significant reduction                                                                                                                                               
 <img width="457" height="571" alt="Screenshot 2025-10-14 105014" src="https://github.com/user-attachments/assets/98508213-c020-44e9-b1f5-f647cb3f8353" />                    
-**Deegree= 2 gives the best r2 score**                                                  
-
+**Deegree= 2 gives the best r2 score**                                                                                                                                  
 <img width="462" height="568" alt="Screenshot 2025-10-14 105032" src="https://github.com/user-attachments/assets/da837c5d-6492-4e7e-9029-2ca77717b7c6" />                    
 **Degree=3 gives some what better r2 score**                                                                                                                              
-R2 score= 0.84...
-
+R2 score= 0.84...                                                                                                                                                                
 **Improvements:**
 -> +8-10% R2 Increase: Substantial improvement in explained variance
 ->Better Error Metrics: Lower prediction errors across the board
