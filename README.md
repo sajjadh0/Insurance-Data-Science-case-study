@@ -31,8 +31,11 @@ Algorithm: Linear Regression
 
 **Exploratory Data Analysis Insights**                                        
 ->Age Distribution: Normal distribution with concentration around middle-aged individuals
+
 ->BMI Analysis: Right-skewed distribution with some outliers in higher BMI ranges
+
 ->Smoking Impact: Significant correlation between smoking status and insurance charges
+
 ->Regional Patterns: Variations in charges across different geographical regions
 
 **Model Performance**                                                  
@@ -40,15 +43,19 @@ Algorithm: Linear Regression
 ->Mean Absolute Error: ~$4,181                                                                                                                                      
 
 <img width="1372" height="570" alt="Screenshot 2025-10-15 130654" src="https://github.com/user-attachments/assets/d620dabc-2e71-440e-a998-aea9d7b90ca3" />                                        
-X-axis: Actual insurance charges from the training dataset                              
-Y-axis: Predicted insurance charges from the model on training data                              
+X-axis: Actual insurance charges from the training dataset        
+
+Y-axis: Predicted insurance charges from the model on training data       
+
 Red diagonal line: Ideal prediction line (where predicted = actual)  
 
 <img width="1369" height="565" alt="Screenshot 2025-10-15 130713" src="https://github.com/user-attachments/assets/36538fcf-c4a1-4ff3-8f3f-0dc4e30885a4" />          
 
 **Training vs Testing:**                                                                                                              
 Training R²: Higher (not explicitly shown but implied by tighter clustering)
+
 Testing R²: 0.784 (78.4% variance explained)
+
 Performance Gap: Small difference between training and testing performance indicates good model generalisation    
 
 
@@ -59,11 +66,17 @@ Performance metrics for polynomial features
 ->MAE: Reduced from ~$4,181                                                                      
 ->MSE: Significant reduction                                                                                                                                               
 <img width="457" height="571" alt="Screenshot 2025-10-14 105014" src="https://github.com/user-attachments/assets/98508213-c020-44e9-b1f5-f647cb3f8353" />                    
-**Deegree= 2 gives the best r2 score**                                                                                                                                  
-<img width="462" height="568" alt="Screenshot 2025-10-14 105032" src="https://github.com/user-attachments/assets/da837c5d-6492-4e7e-9029-2ca77717b7c6" />                    
+**Deegree= 2 gives the best r2 score**      
+
+<img width="462" height="568" alt="Screenshot 2025-10-14 105032" src="https://github.com/user-attachments/assets/da837c5d-6492-4e7e-9029-2ca77717b7c6" />  
+
 **Degree=3 gives some what better r2 score**                                                                                                                              
-R2 score= 0.84...                                                                                                                                                                
+R2 score= 0.84...             
+
+
 **Improvements:**
+
+
 -> +8-10% R2 Increase: Substantial improvement in explained variance
 ->Better Error Metrics: Lower prediction errors across the board
 ->Enhanced Predictive Power: Model captures more complex patterns
