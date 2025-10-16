@@ -1,97 +1,89 @@
-**Insurance Cost Prediction - Linear Regression Case Study**
+# Insurance Cost Prediction - Linear Regression Case Study
 
 This project implements a Linear Regression model to predict insurance costs based on various customer attributes. The analysis includes comprehensive exploratory data analysis (EDA), data preprocessing, feature engineering, and model evaluation to understand the factors that influence medical insurance charges.
 
----
-
-### **Objective**
+## Objective
 
 To build a predictive model that can estimate insurance charges based on customer demographics, health metrics, and lifestyle factors, helping insurance companies better understand pricing determinants.
 
----
-
-### **Dataset**
+## Dataset
 
 The dataset contains 1,338 records with the following features:
 
-- **Features**:
-  - Categorical: sex, region, smoker
-  - Numerical: age, bmi, children
-- **Target**: charges (numeric)
+**Features:**
+- Categorical: sex, region, smoker
+- Numerical: age, bmi, children
 
----
+**Target:** charges (numeric)
 
-### **Implementation**
+## Implementation
 
-- **Handling Categorical Variables**: One-Hot Encoding for sex, smoker, and region
-- **Feature Scaling**: MinMaxScaler for numerical features (age, bmi, children)
-- **Data Splitting**: 80-20 train-test split with random state for reproducibility
+- Handling Categorical Variables: One-Hot Encoding for sex, smoker, and region
+- Feature Scaling: MinMaxScaler for numerical features (age, bmi, children)
+- Data Splitting: 80-20 train-test split with random state for reproducibility
 
----
+## Model Architecture
 
-### **Model Architecture**
+**Algorithm:** Linear Regression
 
-- **Algorithm**: Linear Regression
-- **Feature Engineering**: ColumnTransformer for mixed data types
-- **Evaluation Metrics**:
-  - R² Score
+- Feature Engineering: ColumnTransformer for mixed data types
+- Evaluation Metrics:
+  - R2 Score
   - Mean Absolute Error (MAE)
   - Mean Squared Error (MSE)
 
----
+## Exploratory Data Analysis Insights
 
-### **Exploratory Data Analysis Insights**
+- Age Distribution: Normal distribution with concentration around middle-aged individuals
+- BMI Analysis: Right-skewed distribution with some outliers in higher BMI ranges
+- Smoking Impact: Significant correlation between smoking status and insurance charges
+- Regional Patterns: Variations in charges across different geographical regions
 
-- **Age Distribution**: Normal distribution with concentration around middle-aged individuals
-- **BMI Analysis**: Right-skewed distribution with some outliers in higher BMI ranges
-- **Smoking Impact**: Significant correlation between smoking status and insurance charges
-- **Regional Patterns**: Variations in charges across different geographical regions
+## Model Performance
 
----
+- R2 Score: ~0.784 (78.4% variance explained)
+- Mean Absolute Error: ~$4,181
 
-### **Model Performance**
+### Visualizations
 
-- **R² Score**: ~0.784 (78.4% variance explained)
-- **Mean Absolute Error**: ~$4,181
+**Training Predictions:**
+<img width="1372" height="570" alt="Screenshot 2025-10-15 130654" src="https://github.com/user-attachments/assets/d620dabc-2e71-440e-a998-aea9d7b90ca3" />
 
-**Training vs Testing:**
+- X-axis: Actual insurance charges from the training dataset
+- Y-axis: Predicted insurance charges from the model on training data
+- Red diagonal line: Ideal prediction line (where predicted = actual)
 
-- Training R²: Higher (not explicitly shown but implied by tighter clustering)
+**Testing Predictions:**
+<img width="1369" height="565" alt="Screenshot 2025-10-15 130713" src="https://github.com/user-attachments/assets/36538fcf-c4a1-4ff3-8f3f-0dc4e30885a4" />
+
+### Training vs Testing Performance
+
+- Training R²: Higher
 - Testing R²: 0.784 (78.4% variance explained)
 - Performance Gap: Small difference between training and testing performance indicates good model generalization
 
----
+## Polynomial Regression (Degree 2)
 
-### **Polynomial Regression (Degree 2)**
+**Performance metrics for polynomial features:**
 
-- **R² Score**: ~0.86–0.88 (improvement from 0.784)
-- **MAE**: Reduced from ~$4,181
-- **MSE**: Significant reduction
+- R2 Score: ~0.86-0.88 (improvement from 0.784)
+- MAE: Reduced from ~$4,181
+- MSE: Significant reduction
 
-**Degree Comparison:**
 
-- Degree = 2 gives the best R² score
-- Degree = 3 gives a somewhat better R² score (R² = 0.84...)
+**Degree 2 Results:**
+<img width="457" height="571" alt="Screenshot 2025-10-14 105014" src="https://github.com/user-attachments/assets/98508213-c020-44e9-b1f5-f647cb3f8353" />
 
----
+Degree= 2 gives the best r2 score
 
-### **Improvements**
+**Degree 3 Results:**
+<img width="462" height="568" alt="Screenshot 2025-10-14 105032" src="https://github.com/user-attachments/assets/da837c5d-6492-4e7e-9029-2ca77717b7c6" />
 
-- **+8–10% R² Increase**: Substantial improvement in explained variance
-- **Better Error Metrics**: Lower prediction errors across the board
-- **Enhanced Predictive Power**: Model captures more complex patterns
+Degree=3 gives somewhat better r2 score
+R2 score= 0.84...
 
----
+## Improvements
 
-### **Visualizations**
-
-![Training Predictions](https://github.com/user-attachments/assets/d620dabc-2e71-440e-a998-aea9d7b90ca3)  
-*X-axis: Actual insurance charges from the training dataset  
-Y-axis: Predicted insurance charges from the model on training data  
-Red diagonal line: Ideal prediction line (where predicted = actual)*
-
-![Testing Predictions](https://github.com/user-attachments/assets/36538fcf-c4a1-4ff3-8f3f-0dc4e30885a4)
-
-![Polynomial Regression Degree 2](https://github.com/user-attachments/assets/98508213-c020-44e9-b1f5-f647cb3f8353)
-
-![Polynomial Regression Degree 3](https://github.com/user-attachments/assets/da837c5d-6492-4e7e-9029-2ca77717b7c6)
+- +8-10% R2 Increase: Substantial improvement in explained variance
+- Better Error Metrics: Lower prediction errors across the board
+- Enhanced Predictive Power: Model captures more complex patterns
